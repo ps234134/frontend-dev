@@ -29,14 +29,14 @@ definePageMeta({
         <div class="mt-5">
           <div class="flex items-center mt-2 space-x-2 text-gray-600">
             <font-awesome-icon
-              class="text-gray-400 w-4 h-4"
+              class="text-red-800 w-4 h-4"
               icon="map-marker-alt"
             />
             <span>Eindhoven, The Netherlands</span>
           </div>
           <div class="flex items-center mt-2 space-x-2 text-gray-600">
             <font-awesome-icon
-              class="text-gray-400 w-4 h-4"
+              class="text-red-800 w-4 h-4"
               icon="envelope"
             /><a href="mailto:info@easyexercises.com">info@easyexercises.com</a>
           </div>

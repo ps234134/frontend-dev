@@ -103,7 +103,7 @@ export default {
         <h2>{{ selectedExercise.name }}</h2>
         <img :src="selectedExercise.image" :alt="selectedExercise.name">
         <p>{{ selectedExercise.description }}</p>
-        <button @click="selectedExercise = null">Close</button>
+        <button @click="selectedExercise = null" class="bg-red-800">Close</button>
       </div>
     </div>
   </div>
@@ -164,7 +164,6 @@ export default {
   margin-top: 20px;
   padding: 10px 20px;
   border: none;
-  background: #007bff;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
