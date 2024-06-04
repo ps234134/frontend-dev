@@ -22,7 +22,8 @@
         <div class="mt-6 flex flex-col sm:flex-row gap-3">
           <LandingLink
             href="/exercises" 
-            rel="noopener"
+            rel="noopener"     
+            styleName="primary"     
             >View exercises</LandingLink
           >
           <LandingLink
