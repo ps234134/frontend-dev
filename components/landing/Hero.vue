@@ -21,8 +21,7 @@
         </p>
         <div class="mt-6 flex flex-col sm:flex-row gap-3">
           <LandingLink
-            href="/exercises"
-            target="_blank"
+            href="/exercises" 
             rel="noopener"
             >View exercises</LandingLink
           >
@@ -31,7 +30,6 @@
             styleName="outline"
             rel="noopener"
             href="/about"
-            target="_blank"
             >About</LandingLink
           >
         </div>
