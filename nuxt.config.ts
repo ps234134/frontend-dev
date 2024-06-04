@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ["@nuxt/ui", "@nuxtjs/color-mode"],
+  modules: ["@nuxt/ui", "@nuxtjs/color-mode", "@nuxtjs/sitemap", "@nuxtjs/seo"],
 
   colorMode: {
     preference: 'light', // default value of $colorMode.preference
