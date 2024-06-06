@@ -62,7 +62,7 @@ const team = [
             :height="item.avatar.height"
             format="avif"
             alt="Exercise team member avatar"
-            class="h-[280px] object-cover rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+            class="h-[280px] w-[400px] object-cover rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
           />
         </div>
 
