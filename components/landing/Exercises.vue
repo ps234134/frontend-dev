@@ -1,23 +1,23 @@
 <script>
 
 import tricepDip from '../assets/img/exc/tricep-dip.webp';
-import tricepPushdown from '../assets/img/exc/tricep-pushdown.jpg';
-import overheadTricepExtension from '../assets/img/exc/overhead-tricep-extension.jpg';
+import tricepPushdown from '../assets/img/exc/tricep-pushdown.webp';
+import overheadTricepExtension from '../assets/img/exc/overhead-tricep-extension.webp';
 import overheadPress from '../assets/img/exc/overhead-press.webp';
-import lateralRaise from '../assets/img/exc/lateral-raise.jpg';
+import lateralRaise from '../assets/img/exc/lateral-raise.webp';
 import frontRaise from '../assets/img/exc/front-raise.webp';
 
-import benchPress from '../assets/img/exc/bench-press.jpg';
-import inclineBenchPress from '../assets/img/exc/incline-bench-press.jpg';
-import chestFly from '../assets/img/exc/chest-fly.jpg';
+import benchPress from '../assets/img/exc/bench-press.webp';
+import inclineBenchPress from '../assets/img/exc/incline-bench-press.webp';
+import chestFly from '../assets/img/exc/chest-fly.webp';
 import deadlift from '../assets/img/exc/deadlift.webp';
 import bentOverRow from '../assets/img/exc/bent-over-row.webp';
-import latPulldown from '../assets/img/exc/lat-pulldown.jpg';
-import squat from '../assets/img/exc/squat.jpg';
-import legPress from '../assets/img/exc/leg-press.jpg';
-import lunges from '../assets/img/exc/lunges.jpg';
+import latPulldown from '../assets/img/exc/lat-pulldown.webp';
+import squat from '../assets/img/exc/squat.webp';
+import legPress from '../assets/img/exc/leg-press.webp';
+import lunges from '../assets/img/exc/lunges.webp';
 import bicepCurl from '../assets/img/exc/bicep-curl.webp';
-import hammerCurl from '../assets/img/exc/hammer-curl.jpg';
+import hammerCurl from '../assets/img/exc/hammer-curl.webp';
 import chinUp from '../assets/img/exc/chin-up.webp';
 
 export default {
