@@ -8,6 +8,8 @@
           loading="eager"
           format="webp"
           sizes="100vw sm:50vw md:400px"
+          height="100%"
+          width="100%"
         />
       </div>
   

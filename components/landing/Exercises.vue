@@ -92,14 +92,14 @@ export default {
     <UTabs :items="items" v-model="activeTabIndex"></UTabs>
     <div class="flex justify-center flex-wrap">
       <div class="flex flex-col w-48 m-2 p-2 border border-gray-300 rounded text-center cursor-pointer justify-between" v-for="exercise in items[activeTabIndex].exercises" @click="openExercise(exercise)">
-        <NuxtImg :src="exercise.image" :alt="exercise.name" sizes="100vw sm:50vw md:400px"/>
+        <NuxtImg :src="exercise.image" :alt="exercise.name" sizes="100vw sm:50vw md:400px" height="100%" width="100%"/>
         <h2 class="pt-6 font-bold text-red-800">{{ exercise.name }}</h2>
       </div>
     </div>
     <div v-if="selectedExercise" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-[100]">
       <div class="w-72 p-5 bg-white border border-gray-300 rounded text-center">
         <h2>{{ selectedExercise.name }}</h2>
-        <NuxtImg :src="selectedExercise.image" :alt="selectedExercise.name" sizes="100vw sm:50vw md:400px"/>
+        <NuxtImg :src="selectedExercise.image" :alt="selectedExercise.name" sizes="100vw sm:50vw md:400px" height="100%" width="100%"/>
         <p>{{ selectedExercise.description }}</p>
         <button @click="selectedExercise = null" class="mt-5 px-5 py-2 border-none text-white bg-red-800 rounded cursor-pointer">Close</button>
       </div>

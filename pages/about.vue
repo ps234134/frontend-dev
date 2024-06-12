@@ -50,7 +50,7 @@ const team = [
         Empowering Your Fitness Journey with Our Platform.
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        Our platform is designed to help individuals around the world reach their fitness goals. We provide detailed exercise instructions, customizable workout plans, and a supportive community to keep you motivated. No matter your fitness level or experience, our platform has the tools and resources to help you succeed on your fitness journey..
+        Our platform is designed to help individuals around the world reach their fitness goals. We provide detailed exercise instructions, customizable workout plans, and a supportive community to keep you motivated. No matter your fitness level or experience, our platform has the tools and resources to help you succeed on your fitness journey and live a healthier life.
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
