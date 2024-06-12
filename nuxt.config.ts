@@ -4,7 +4,6 @@ export default defineNuxtConfig({
 
   css: [
     '~/assets/css/main.css',
-    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
 
   postcss: {
@@ -25,8 +24,19 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ["@nuxt/ui", "@nuxtjs/color-mode", "@nuxtjs/sitemap", "@nuxtjs/seo"],
-
+  modules: [
+    "@nuxt/ui",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/seo",
+    "@vesp/nuxt-fontawesome",
+    "@nuxt/image",
+  ],
+  fontawesome:{
+    icons: {
+      solid: ['briefcase', 'bullhorn', 'bullseye', 'chart-line', 'check-circle', 'user'],
+    }
+  },
   colorMode: {
     preference: 'light', // default value of $colorMode.preference
     fallback: 'dark', // fallback value if not system preference found

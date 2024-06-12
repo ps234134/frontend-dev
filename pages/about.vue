@@ -8,9 +8,9 @@ definePageMeta({
 });
 
 
-import feature1 from '../assets/img/feature-1.jpg';
-import feature2 from '../assets/img/feature-2.jpg';
-import feature3 from '../assets/img/feature-3.avif';
+import feature1 from '/img/abt/feature-1.webp';
+import feature2 from '/img/abt/feature-2.webp';
+import feature3 from '/img/abt/feature-3.webp';
 
 const team = [
   {
@@ -56,11 +56,9 @@ const team = [
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       <div v-for="item of team" class="group">
         <div class="w-full aspect-square">
-          <img
+          <NuxtImg
             :src="item.avatar.src"
-            :width="item.avatar.width"
-            :height="item.avatar.height"
-            format="avif"
+            format="webp"
             alt="Exercise team member avatar"
             class="h-[280px] w-[400px] object-cover rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
           />

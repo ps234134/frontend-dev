@@ -1,31 +1,31 @@
 <script>
 
-import tricepDip from '../assets/img/exc/tricep-dip.webp';
-import tricepPushdown from '../assets/img/exc/tricep-pushdown.jpg';
-import overheadTricepExtension from '../assets/img/exc/overhead-tricep-extension.jpg';
-import overheadPress from '../assets/img/exc/overhead-press.webp';
-import lateralRaise from '../assets/img/exc/lateral-raise.jpg';
-import frontRaise from '../assets/img/exc/front-raise.webp';
+import tricepDip from '/img/exc/tricep-dip.webp';
+import tricepPushdown from '/img/exc/tricep-pushdown.webp';
+import overheadTricepExtension from '/img/exc/overhead-tricep-extension.webp';
+import overheadPress from '/img/exc/overhead-press.webp';
+import lateralRaise from '/img/exc/lateral-raise.webp';
+import frontRaise from '/img/exc/front-raise.webp';
 
-import benchPress from '../assets/img/exc/bench-press.jpg';
-import inclineBenchPress from '../assets/img/exc/incline-bench-press.jpg';
-import chestFly from '../assets/img/exc/chest-fly.jpg';
-import deadlift from '../assets/img/exc/deadlift.webp';
-import bentOverRow from '../assets/img/exc/bent-over-row.webp';
-import latPulldown from '../assets/img/exc/lat-pulldown.jpg';
-import squat from '../assets/img/exc/squat.jpg';
-import legPress from '../assets/img/exc/leg-press.jpg';
-import lunges from '../assets/img/exc/lunges.jpg';
-import bicepCurl from '../assets/img/exc/bicep-curl.webp';
-import hammerCurl from '../assets/img/exc/hammer-curl.jpg';
-import chinUp from '../assets/img/exc/chin-up.webp';
+import benchPress from '/img/exc/bench-press.webp';
+import inclineBenchPress from '/img/exc/incline-bench-press.webp';
+import chestFly from '/img/exc/chest-fly.webp';
+import deadlift from '/img/exc/deadlift.webp';
+import bentOverRow from '/img/exc/bent-over-row.webp';
+import latPulldown from '/img/exc/lat-pulldown.webp';
+import squat from '/img/exc/squat.webp';
+import legPress from '/img/exc/leg-press.webp';
+import lunges from '/img/exc/lunges.webp';
+import bicepCurl from '/img/exc/bicep-curl.webp';
+import hammerCurl from '/img/exc/hammer-curl.webp';
+import chinUp from '/img/exc/chin-up.webp';
 
 export default {
   data() {
     return {
       selectedExercise: null,
       activeTabIndex: 0,
-      items: [
+      items: [                                                                                                                                                                                                                                                                                                                                        
       {
           label: 'Chest',
           exercises: [
@@ -89,83 +89,20 @@ export default {
 
 <template>
   <div class="pt-16">
-    <UTabs :items="items" v-model="activeTabIndex">
-      
-    </UTabs>
-    <div class="exercises-container">
-      <div class="exercise-container" v-for="exercise in items[activeTabIndex].exercises" @click="openExercise(exercise)">
-        <img :src="exercise.image" :alt="exercise.name">
-        <h2>{{ exercise.name }}</h2>
+    <UTabs :items="items" v-model="activeTabIndex"></UTabs>
+    <div class="flex justify-center flex-wrap">
+      <div class="flex flex-col w-48 m-2 p-2 border border-gray-300 rounded text-center cursor-pointer justify-between" v-for="exercise in items[activeTabIndex].exercises" @click="openExercise(exercise)">
+        <NuxtImg :src="exercise.image" :alt="exercise.name" sizes="100vw sm:50vw md:400px"/>
+        <h2 class="pt-6 font-bold text-red-800">{{ exercise.name }}</h2>
       </div>
     </div>
-    <div v-if="selectedExercise" class="modal-overlay">
-      <div class="modal">
+    <div v-if="selectedExercise" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-[100]">
+      <div class="w-72 p-5 bg-white border border-gray-300 rounded text-center">
         <h2>{{ selectedExercise.name }}</h2>
-        <img :src="selectedExercise.image" :alt="selectedExercise.name">
+        <NuxtImg :src="selectedExercise.image" :alt="selectedExercise.name" sizes="100vw sm:50vw md:400px"/>
         <p>{{ selectedExercise.description }}</p>
-        <button @click="selectedExercise = null" class="bg-red-800">Close</button>
+        <button @click="selectedExercise = null" class="mt-5 px-5 py-2 border-none text-white bg-red-800 rounded cursor-pointer">Close</button>
       </div>
     </div>
   </div>
 </template>
-
-
-
-<style scoped>
-.exercises-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.exercise-container {
-  width: 200px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.exercise-container img {
-  width: 100%;
-  height: auto;
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal {
-  width: 300px;
-  padding: 20px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.modal img {
-  width: 100%;
-  height: auto;
-}
-
-.modal button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: none;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-}
-</style>
