@@ -1,7 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-
+  nitro: {
+    compressPublicAssets: true,
+  },
+  site: {
+    url:'http://localhost:3000'
+  },
   css: [
     '~/assets/css/main.css',
   ],
@@ -31,7 +36,31 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@vesp/nuxt-fontawesome",
     "@nuxt/image",
+    "@vite-pwa/nuxt"
   ],
+
+  pwa: {
+    manifest: {
+      name: 'EasyExercises',
+      short_name: 'EasyExercises',
+      description: 'EasyExercises is a comprehensive fitness platform meticulously designed to assist individuals across the globe in achieving their unique fitness goals. Our mission is to make fitness accessible and achievable for everyone, regardless of their starting point or fitness level. We provide detailed, easy-to-follow exercise instructions that cater to a wide range of fitness levels and goals. Whether you are a beginner just starting your fitness journey, or an experienced athlete looking to push your limits, our extensive library of exercises can help you get there.',
+      theme_color: '#991b1b',
+      background_color:'#ffffff',
+      lang: 'en',
+      icons: [
+        {
+          src: 'icons/icon-192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+      ],
+    },
+    devOptions: {
+       enabled: true,
+       type: 'module',
+    },
+  }, 
+
   fontawesome:{
     icons: {
       solid: ['briefcase', 'bullhorn', 'bullseye', 'chart-line', 'check-circle', 'user'],
